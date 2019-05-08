@@ -48,7 +48,7 @@
             var username = element('username');
             
             // Connect to socket.io
-            var socket = io.connect('https://eloquent-golick-518c21.netlify.com/:4000');
+            var socket = io.connect('https://eloquent-golick-518c21.netlify.com:${PORT}');
 
             if(socket !== undefined){
                 console.log('Connected to socket...');
@@ -67,8 +67,7 @@
                             //messages.insertBefore(message, messages.firstChild);
                         }
                     }
-                });
-                
+                });                
 
                // Handle Input
                textarea.addEventListener('keydown', function(event){
